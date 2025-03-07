@@ -1,3 +1,5 @@
+Pacman:
+```sh
 hyprland
 wofi
 kitty
@@ -9,9 +11,9 @@ ttf-font-awesome
 otf-font-aweosme
 ttf-jetbrains-mono
 ttf-ubuntu-mono-nerd
+```
 
-fish
-pkgfile
-ttf-dejavu
-powerline-fonts
-ineutils
+Fish:
+```sh
+fish && pkgfile && ttf-dejavu && powerline-fonts && ineutils
+```
