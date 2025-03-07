@@ -17,3 +17,8 @@ Fish:
 ```sh
 fish && pkgfile && ttf-dejavu && powerline-fonts && ineutils
 ```
+For Mac:
+```sh
+brightnessctl
+broadcom-wl
+```
