@@ -22,3 +22,8 @@ For Mac:
 brightnessctl
 broadcom-wl
 ```
+
+Theme:
+```git
+https://github.com/linuxmobile/Colloid-gtk-theme
+```
