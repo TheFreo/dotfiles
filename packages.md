@@ -6,6 +6,7 @@ kitty
 hyprpaper
 hyprlock
 neofetch
+swaync
 hyprshot
 ttf-font-awesome
 otf-font-aweosme
