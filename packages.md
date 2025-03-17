@@ -22,6 +22,7 @@ For Mac:
 ```sh
 brightnessctl
 broadcom-wl
+macfan-git
 ```
 
 Theme:
