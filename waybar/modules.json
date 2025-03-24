@@ -26,7 +26,18 @@
             // END WORKSPACES
         }       
     },
-
+    	"custom/waymedia": {
+    	"format": "{icon}{artist}{divider}{title}",
+    	"exec": "~/.config/waybar/scripts/waymedia/waymedia",
+    	"interval": 1,
+    	"limit": 60,
+    	"on-click": "playerctl play-pause",
+    	"on-scroll-up": "playerctl next",
+    	"on-scroll-down": "playerctl previous",
+    	"pause-icon": "   ",
+    	"play-icon": "   ",
+    	"divider": " - "
+     },
     // Taskbar
     "wlr/taskbar": {
         "format": "{icon}",
