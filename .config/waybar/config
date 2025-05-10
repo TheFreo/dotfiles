@@ -5,10 +5,11 @@
     "margin-right": 10,
     "height" : 28,
     "modules-left": [
-      "hyprland/workspaces",
+      "custom/media",
+      "hyprland/window"
     ],
     "modules-center": [
-      "hyprland/window",
+      "1hyprland/workspaces",
     ],
     "modules-right": [
     //"hyprland/language",
@@ -18,7 +19,7 @@
     "custom/notification",
     ],
     "custom/media": {
-    "interval": 1,
+    "interval": 90,
     "exec": "~/.config/waybar/settings/mediaexec.sh",
     "on-click": "~/.config/waybar/settings/mediatoggle.sh"
     },
@@ -43,8 +44,8 @@
       },
     },
     "clock": {
-      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-      "format-alt": "{:%Y-%m-%d}"
+      "tooltip-format": "<big>{:%d-%m %A}</big>\n<tt><small>{calendar}</small></tt>",
+      "format-alt": "{:%d-%m-%Y}"
     },
     "cpu": {
       "format": " {usage}%",
@@ -80,7 +81,7 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon}  {capacity}%",
+        "format": "{icon} {capacity}%",
         "format-charging": "󰂄 {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{icon} {time}",

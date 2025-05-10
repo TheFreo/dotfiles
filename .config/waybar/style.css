@@ -101,6 +101,7 @@ button:hover {
 }
 
 #window {
+  padding-left: 25px;
   color: @rosewater;
 }
 
@@ -120,6 +121,7 @@ button:hover {
 
 .modules-center {
   padding: 0 10px;
+  opacity: 0;
 }
 #battery.charging,
 #battery.plugged {

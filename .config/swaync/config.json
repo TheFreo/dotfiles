@@ -72,14 +72,18 @@
     },
     "buttons-grid": {
       "actions": [
-	{
+  {
+	  "label": "",
+	  "command": "sh -c '~/.config/swaync/scripts/screen.sh'"
+	},
+  {
 	  "label": "󰸉",
 	  "command": "sh -c '~/.config/swaync/scripts/wallpaper.sh'"
 	},
-        {
-          "label": "󰍃",
-          "command": "sh -c '~/.config/swaync/scripts/lock.sh'"
-        }
+  {
+    "label": "󰍃",
+    "command": "sh -c '~/.config/swaync/scripts/lock.sh'"
+  }
       ]
     }
   }
