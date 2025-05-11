@@ -23,6 +23,7 @@ For Mac:
 brightnessctl
 broadcom-wl
 macfan-git
+libinput-three-finger-drag
 ```
 
 Theme:
