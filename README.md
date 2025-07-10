@@ -1,7 +1,7 @@
 # Dotfiles
 My Hyprland config for Arch Linux
 
-# Details
+## Details
 - **OS**: Arch Linux
 - **Laptop**: MacBook Pro 13 2014
 - **Compositor**: [Hyprland](https://github.com/hyprwm/Hyprland)
@@ -14,7 +14,7 @@ My Hyprland config for Arch Linux
 - **Browser**: [Waterfox](https://github.com/BrowserWorks/Waterfox)
 - **File Manager**: [nautilus](https://github.com/GNOME/nautilus)
 
-# Screenshots
+## Screenshots
 
 ![](assets/1.png)
 ![](assets/2.png)
