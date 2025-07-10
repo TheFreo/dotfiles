@@ -11,7 +11,3 @@ end
 function fish_greeting
     echo ""
 end
-
-alias con="~/.config/swaync/scripts/wifi.sh" #script for connecting to a wifi network
-
-fish_add_path /home/thefreo/.spicetify

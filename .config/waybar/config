@@ -15,6 +15,7 @@
     //"hyprland/language",
     "pulseaudio",
     "battery",
+    "network",
     "clock",
     "custom/notification",
     ],
@@ -27,9 +28,18 @@
       "format": "{}",
       "max-length": 35,
       "rewrite": {
-        "": "Hyprland"
+        "": "(˶ᵔ ᵕ ᵔ˶)"
       },
       "separate-outputs": true,
+    },
+        "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "󰤨",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "󰤯",
+        "format-alt": "{essid} ({signalStrength}%)"
     },
     "hyprland/workspaces": {
       "format": "{icon}",

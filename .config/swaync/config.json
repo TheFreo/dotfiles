@@ -44,7 +44,7 @@
     "label",
     "buttons-grid",
     "mpris",
-    "volume",
+    "vo1lume",
     "dnd",
     "notifications"
   ],
@@ -83,6 +83,10 @@
   {
     "label": "󰍃",
     "command": "sh -c '~/.config/swaync/scripts/lock.sh'"
+  },
+  {
+    "label": "",
+    "command": "sh -c '~/.config/swaync/scripts/b.sh'"
   }
       ]
     }
