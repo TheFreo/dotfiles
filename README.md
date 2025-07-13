@@ -74,6 +74,7 @@ brightnessctl
 broadcom-wl
 macfan-git
 libinput-three-finger-drag
+libinput-gestures
 playerctl
 tlp
 ```
