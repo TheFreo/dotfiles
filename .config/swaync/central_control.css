@@ -166,12 +166,12 @@ progressbar {
   padding: 2px 4px;
   margin: 0px 4px 30px 4px;
   border-radius: 10px;
-  background: alpha(#000000, .4);
+  background: alpha(#000000, .9);
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button {
-  margin: 4px 12px;
-  padding: 8px 22px;
+  margin: 4px 15px;
+  padding: 8px 27px;
   background: transparent;
   border-radius: 10px;
 }
@@ -181,14 +181,23 @@ progressbar {
 }
 
 /* Music player */
+
+.widget-mpris .widget-mpris-player .mpris-overlay {
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.mpris-background {
+  border-radius: 15px;
+}
+
 .widget-mpris {
-    border-radius: 10px;
+    border-radius: 15px;
     margin: 0px 4px 0px 4px;
 }
 
 .widget-mpris-player {
-    background-color:  #333;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 8px;
     box-shadow: none;
 }
@@ -200,6 +209,7 @@ progressbar {
  
 .widget-mpris button {
   color: #FFF;
+  padding: 0 10px;
 }
 
 .widget-mpris button:hover {
