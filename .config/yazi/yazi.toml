@@ -1,2 +1,28 @@
 [opener]
-edit = [{ run = 'nvim "$@"', block = true }]
+edit = [
+    { run = 'nvim "$@"', block = true } 
+]
+video = [
+    { run = 'vlc "$@"', desc = "VLC", orphan = true }
+]
+audio = [
+    { run = 'mpv "$@" mpv --force-window', desc = "MPV", orphan = true }
+]
+images = [
+    { run = 'sxiv "$@"', desc = "SXIV", orphan = true }
+]
+
+[open]
+rules = [
+  { name = "*/", use = [ "edit", "open", "reveal" ] },
+
+  { mime = "video/*", use = [ "video", "reveal" ] },
+  { mime = "audio/*", use = [ "audio", "reveal" ] },
+  { mime = "image/*", use = [ "images", "reveal" ] },
+  { mime = "text/*",  use = [ "edit", "reveal" ] },
+
+  { mime = "application/json", use = [ "edit", "reveal" ] },
+  { mime = "*/javascript",     use = [ "edit", "reveal" ] },
+
+	{ mime = "*", use = [ "open", "edit", "reveal" ] },
+]
