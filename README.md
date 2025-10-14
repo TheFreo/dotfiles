@@ -72,7 +72,6 @@ cd WhiteSur-icon-theme
 ```sh
 brightnessctl
 broadcom-wl
-macfan-git
 libinput-gestures
 playerctl
 tlp

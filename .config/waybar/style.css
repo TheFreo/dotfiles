@@ -10,8 +10,8 @@
 }
 
 window#waybar {
-  background-color: @1base;
-  border-radius: 13px;
+  background-color: #000000;
+  border-radius: 0px;
   transition-property: background-color;
   transition-duration: 0.5s;
 }

@@ -1,8 +1,8 @@
 {
   "position": "top",
-    "margin-top" : 2,
-    "margin-left": 10,
-    "margin-right": 10,
+    "margin-top" : 0,
+    "margin-left": 0,
+    "margin-right": 0,
     "height" : 28,
     "modules-left": [
       "custom/media",
@@ -71,8 +71,8 @@
     },
     "pulseaudio": {
       "format": "{icon}  {volume}%",
-      "format-bluetooth": "{volume}% {icon} {format_source}",
-      "format-bluetooth-muted": " {icon} {format_source}",
+      "format-bluetooth": "{icon}  {volume}%",
+      "format-bluetooth-muted": " {icon}",
       "format-muted": " {format_source}",
       "format-icons": {
         "headphone": "",
@@ -103,13 +103,13 @@
     "tooltip": false,
     "format": "{icon}",
     "format-icons": {
-      "notification": "<span foreground='red'><sup></sup></span>",
+      "notification": "<span foreground='#c4a0c4'></span>",
       "none": " ",
-      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-notification": "<span foreground='#c4a0c4'><sup></sup></span>",
       "dnd-none": " ",
-      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-notification": "<span foreground='#c4a0c4'></span>",
       "inhibited-none": " ",
-      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-notification": "<span foreground='#c4a0c4'><sup></sup></span>",
       "dnd-inhibited-none": " "
     },
     "return-type": "json",
