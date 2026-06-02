@@ -1,18 +1,20 @@
 if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
     #Autostart hyprland after login in tty1
-    exec hyprland
+    exec start-hyprland
 end
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
     fastfetch
-    #neofetch
 end
 
 function fish_greeting
     echo ""
 end
 
-thefuck --alias | source 
-
-fish_add_path /home/thefreo/.spicetify
+alias po='loginctl poweroff'
+alias re='loginctl reboot'
+alias nv='nvim'
+alias taildown='sudo systemctl stop tailscaled'
+alias y='yazi'
+alias sudo='doas'

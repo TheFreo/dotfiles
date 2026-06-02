@@ -1,31 +1,27 @@
-#!/bin/sh
+#!/bin/bash
 
-# Укажите путь к директории с обоями
-WALLPAPER_DIR="$HOME/Wall"
-INDEX_FILE="$HOME/.wallpaper_index.txt"
+WALL_DIR="$HOME/Wall"
+CACHE_DIR="$HOME/.cache/wall-thumbs"
 
-# Создание файла индекса, если он не существует
-if [ ! -f "$INDEX_FILE" ]; then
-    echo 0 > "$INDEX_FILE"
+mkdir -p "$CACHE_DIR"
+
+for img in "$WALL_DIR"/*; do
+    name=$(basename "$img")
+    thumb="$CACHE_DIR/$name.png"
+
+    if [ ! -f "$thumb" ]; then
+        magick "$img" -thumbnail 300x200^ -gravity center -extent 300x200 "$thumb"
+    fi
+done
+
+choice=$(for img in "$WALL_DIR"/*; do
+    name=$(basename "$img")
+    printf "%s\0icon\x1f%s\n" "$name" "$CACHE_DIR/$name.png"
+done | rofi -dmenu -show-icons -p "Wallpaper")
+
+if [ -n "$choice" ]; then
+    awww img "$WALL_DIR/$choice" \
+        --transition-type wipe \
+        --transition-duration 1 \
+        --transition-fps 60
 fi
-
-# Чтение текущего индекса
-CURRENT_INDEX=$(cat "$INDEX_FILE")
-
-# Получение массива изображений
-WALLPAPERS=("$WALLPAPER_DIR"/*.{jpg,png,jpeg})
-
-# Подсчет количества изображений
-WALLPAPER_COUNT=${#WALLPAPERS[@]}
-
-# Проверка, чтобы индекс был в пределах массива
-if [ $CURRENT_INDEX -ge $WALLPAPER_COUNT ]; then
-    CURRENT_INDEX=0
-fi
-
-# Установка обоев
-swww img ${WALLPAPERS[$CURRENT_INDEX]} --transition-type simple --transition-step 80
-
-# Увеличение индекса и сохранение его обратно в файл
-NEW_INDEX=$((CURRENT_INDEX + 1))
-echo $NEW_INDEX > "$INDEX_FILE"

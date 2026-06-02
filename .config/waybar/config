@@ -1,5 +1,5 @@
 {
-  "position": "top",
+  "position": "bottom",
     "margin-top" : 0,
     "margin-left": 0,
     "margin-right": 0,
@@ -33,13 +33,13 @@
       "separate-outputs": true,
     },
         "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "󰤨",
+        "interface": "wlan*", // (Optional) To force the use of this interface
+        "format-wifi": "<span color='#ffffff'> / </span><span color='#ffffff'>wlan:</span> <span color='#ffffff'>on</span>",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "󰤯",
-        "format-alt": "{essid} ({signalStrength}%)"
+        "format-disconnected": "<span color='#ffffff'> / </span><span color='#ffffff'>wlan:</span> <span color='#ffffff'>off</span>",
+        "format-alt": "<span color='#ffffff'> / </span>{essid} ({signalStrength}%)"
     },
     "hyprland/workspaces": {
       "format": "{icon}",
@@ -54,8 +54,9 @@
       },
     },
     "clock": {
+      "format": "<span color='#ffffff'> / </span>{:%H:%M} ",
       "tooltip-format": "<big>{:%d-%m %A}</big>\n<tt><small>{calendar}</small></tt>",
-      "format-alt": "{:%d-%m-%Y}"
+      "format-alt": "<span color='#ffffff'> / </span>{:%d-%m-%Y} "
     },
     "cpu": {
       "format": " {usage}%",
@@ -70,10 +71,10 @@
       "format-icons": ["", "", ""]
     },
     "pulseaudio": {
-      "format": "{icon}  {volume}%",
-      "format-bluetooth": "{icon}  {volume}%",
+      "format": "<span color='#ffffff'>vol:</span> <span color='#ffffff'>{volume}%</span>",
+      "format-bluetooth": "<span color='#ffffff'>vol:</span> <span color='#ffffff'>{volume}%</span>",
       "format-bluetooth-muted": " {icon}",
-      "format-muted": " {format_source}",
+      "format-muted": "<span color='#ffffff'>vol:</span> <span color='#ffffff'>0%</span>",
       "format-icons": {
         "headphone": "",
         "hands-free": "",
@@ -91,10 +92,10 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon} {capacity}%",
-        "format-charging": "󰂄 {capacity}%",
+        "format": "<span color='#ffffff'> / </span><span color='#ffffff'>bat:</span> <span color='#ffffff'>{capacity}%</span>",
+        "format-charging": "<span color='#ffffff'> / </span><span color='#ffffff'>ac:</span> <span color='#ffffff'>{capacity}%</span>",
         "format-plugged": " {capacity}%",
-        "format-alt": "{icon} {time}",
+        // "format-alt": "{icon} {time}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": [" ", " ", " ", " ", " "]
@@ -103,13 +104,13 @@
     "tooltip": false,
     "format": "{icon}",
     "format-icons": {
-      "notification": "<span foreground='#c4a0c4'></span>",
+      "notification": "<span foreground='#ffffff'></span>",
       "none": " ",
-      "dnd-notification": "<span foreground='#c4a0c4'><sup></sup></span>",
+      "dnd-notification": "<span foreground='#ffffff'><sup></sup></span>",
       "dnd-none": " ",
-      "inhibited-notification": "<span foreground='#c4a0c4'></span>",
+      "inhibited-notification": "<span foreground='#ffffff'></span>",
       "inhibited-none": " ",
-      "dnd-inhibited-notification": "<span foreground='#c4a0c4'><sup></sup></span>",
+      "dnd-inhibited-notification": "<span foreground='#ffffff'><sup></sup></span>",
       "dnd-inhibited-none": " "
     },
     "return-type": "json",
@@ -119,4 +120,6 @@
     "on-click-right": "swaync-client -d -sw",
     "escape": true
   },
+
+
 }

@@ -2,17 +2,19 @@
 My Hyprland config for Arch Linux
 
 ## Details
-- **OS**: Arch Linux
-- **Laptop**: MacBook Pro 13 2014
+- **OS**: [Artix Linux](https://artixlinux.org/)
+- **Laptop**: [MacBook Pro 13 2014](https://support.apple.com/en-us/111942)
 - **Compositor**: [Hyprland](https://github.com/hyprwm/Hyprland)
 - **Panel**: [waybar](https://github.com/Alexays/Waybar)
+- **Lock screen**: [swaylock](https://github.com/swaywm/swaylock)
 - **Notifications**: [swaync](https://github.com/ErikReider/SwayNotificationCenter)
-- **Wallpaper Loader**: [swww](https://github.com/Horus645/swww)
+- **Wallpaper loader**: [awww](https://codeberg.org/LGFae/awww)
+- **Wallpaper picker**: [rofi](https://github.com/davatorium/rofi)
 - **Terminal**: [kitty](https://github.com/kovidgoyal/kitty)
 - **Shell**: [fish](https://fishshell.com/)
-- **Search menu**: [wofi](https://github.com/uncomfyhalomacro/wofi)
+- **Search menu**: [wofi](https://github.com/SimplyCEO/wofi)
 - **Browser**: [Waterfox](https://github.com/BrowserWorks/Waterfox)
-- **File Manager**: [nautilus](https://github.com/GNOME/nautilus)
+- **File manager**: [yazi](https://yazi-rs.github.io/)
 
 ## Screenshots
 
@@ -31,7 +33,7 @@ git clone https://github.com/TheFreo/dotfiles
 cd dotfiles
 cp -r .config ~/
 cp -r Wall ~/
-swww img ~/Wall/6.jpg
+awww img ~/Wall/6.jpg
 ```
 
 ### Fonts
@@ -72,7 +74,6 @@ cd WhiteSur-icon-theme
 ```sh
 brightnessctl
 broadcom-wl
-libinput-gestures
 playerctl
 tlp
 ```

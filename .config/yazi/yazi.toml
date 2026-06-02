@@ -12,17 +12,25 @@ images = [
     { run = 'sxiv "$@"', desc = "SXIV", orphan = true }
 ]
 
+nautilus = [
+    { run = 'nautilus "$@"', desc = "in file manager", orphan = true }
+]
+
+
 [open]
 rules = [
-  { name = "*/", use = [ "edit", "open", "reveal" ] },
+  # { mime = "*/", use = [ "edit", "open", "reveal", "nautilus" ] },
 
-  { mime = "video/*", use = [ "video", "reveal" ] },
-  { mime = "audio/*", use = [ "audio", "reveal" ] },
-  { mime = "image/*", use = [ "images", "reveal" ] },
-  { mime = "text/*",  use = [ "edit", "reveal" ] },
+  { mime = "video/*", use = [ "video", "open", "reveal", "nautilus" ] },
+  { mime = "audio/*", use = [ "audio", "open", "reveal", "nautilus" ] },
+  { mime = "image/*", use = [ "images", "open", "reveal", "nautilus" ] },
+  { mime = "text/*",  use = [ "edit", "open", "reveal", "nautilus" ] },
 
   { mime = "application/json", use = [ "edit", "reveal" ] },
   { mime = "*/javascript",     use = [ "edit", "reveal" ] },
 
-	{ mime = "*", use = [ "open", "edit", "reveal" ] },
+	{ mime = "*", use = [ "open", "edit", "reveal", "nautilus" ] },
 ]
+
+# keymap.toml
+

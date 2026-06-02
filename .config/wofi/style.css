@@ -1,3 +1,9 @@
+:root {
+  color: #c0caf5;
+  color: #c4a0c4;
+  color: #f3dbfd;
+}
+
 window {
   background-color: #000000;
 }
@@ -13,7 +19,7 @@ window {
 
 #input {
   background-color: #000000;
-  color: #c0caf5;
+  color: #c4a0c4;
   outline: none;
   box-shadow: none;
   border: 0;
@@ -36,7 +42,7 @@ window {
 }
 
 #entry:selected {
-  background-color: #c0caf5;
+  background-color: #c4a0c4;
   outline: none;
 }
 

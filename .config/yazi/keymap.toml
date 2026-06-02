@@ -1,0 +1,36 @@
+[[mgr.prepend_keymap]]
+on   = [ "n" ]
+run  = "plugin vcs-files"
+desc = "Show Git file changes"
+
+[[mgr.prepend_keymap]]
+on  = "M"
+run = "plugin mount"
+
+[[mgr.prepend_keymap]]
+on  = "y"
+run = [ 'shell -- for path in %s; do echo "file://$path"; done | wl-copy -t text/uri-list', "yank" ]
+
+[[mgr.prepend_keymap]]
+on = "<C-y>"
+run = [ "shell -- dragon-drop -x -i -T %s1" ]
+
+[[mgr.prepend_keymap]]
+on   = [ "<C-s>" ]
+run  = "plugin kdeconnect-send"
+desc = "Send selected files via KDE Connect"
+
+[[mgr.prepend_keymap]]
+desc = "Start bunny.yazi"
+on = ";"
+run = "plugin bunny"
+
+[[mgr.prepend_keymap]]
+on   = "i"
+run  = "plugin open-with-cmd -- block"
+desc = "Open with command in the terminal"
+
+[[mgr.prepend_keymap]]
+on   = "I"
+run  = "plugin open-with-cmd"
+desc = "Open with command"
