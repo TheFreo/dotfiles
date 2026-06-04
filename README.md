@@ -15,6 +15,7 @@ My Hyprland config for Arch Linux
 - **Search menu**: [wofi](https://github.com/SimplyCEO/wofi)
 - **Browser**: [Waterfox](https://github.com/BrowserWorks/Waterfox)
 - **File manager**: [yazi](https://yazi-rs.github.io/)
+- **Screenshots** [Hyprshot](https://github.com/Gustash/Hyprshot)
 
 ## Screenshots
 
