@@ -1,5 +1,5 @@
 # Dotfiles
-My Hyprland config for Arch Linux
+My Hyprland config for Artix Linux
 
 ## Details
 - **OS**: [Artix Linux](https://artixlinux.org/)
