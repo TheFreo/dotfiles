@@ -16,6 +16,21 @@ nautilus = [
     { run = 'nautilus "$@"', desc = "in file manager", orphan = true }
 ]
 
+wall = [
+    { run = 'awww img "$@"', desc = "on wallpaper", orphan = true }
+]
+
+arc = [
+  { run = '''
+    sh -c '
+      archive="$1"
+      dir="${archive%.*}"
+      mkdir -p "$dir"
+      7z x "$archive" -o"$dir"
+    ' sh %s
+  ''', desc = "Extract to folder", orphan = true }
+]
+
 
 [open]
 rules = [
@@ -23,8 +38,9 @@ rules = [
 
   { mime = "video/*", use = [ "video", "open", "reveal", "nautilus" ] },
   { mime = "audio/*", use = [ "audio", "open", "reveal", "nautilus" ] },
-  { mime = "image/*", use = [ "images", "open", "reveal", "nautilus" ] },
+  { mime = "image/*", use = [ "images", "open", "reveal", "nautilus", "wall" ] },
   { mime = "text/*",  use = [ "edit", "open", "reveal", "nautilus" ] },
+  { mime = "application/*",  use = [ "arc", "open", "reveal", "nautilus" ] },
 
   { mime = "application/json", use = [ "edit", "reveal" ] },
   { mime = "*/javascript",     use = [ "edit", "reveal" ] },
