@@ -15,5 +15,4 @@ end
 alias po='loginctl poweroff'
 alias re='loginctl reboot'
 alias nv='nvim'
-alias taildown='sudo systemctl stop tailscaled'
 alias y='yazi'
